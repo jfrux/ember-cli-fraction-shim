@@ -20,7 +20,7 @@ module.exports = {
     while (typeof app.import !== 'function' && app.app) {
       app = app.app;
     }
-    
+
     this.app = app;
     this.fractionOptions = this.getConfig();
 
@@ -52,8 +52,8 @@ module.exports = {
     var options = this.fractionOptions;
 
     app.import({
-      development: vendor + '/fraction.js',
-      production: vendor + '/fraction.min.js'
+      development: vendor + '/fraction.js/fraction.js',
+      production: vendor + '/fraction.js/fraction.min.js'
     }, { prepend: true });
   },
 
@@ -127,7 +127,7 @@ module.exports = {
     }
 
     trees.push(new Funnel(options.fractionPath, {
-      destDir: 'fraction',
+      destDir: 'fraction.js',
       include: [new RegExp(/\.js$/)],
       exclude: ['tests', 'ender', 'package'].map(function(key) {
         return new RegExp(key + '\.js$');
