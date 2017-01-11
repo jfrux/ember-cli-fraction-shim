@@ -21,7 +21,7 @@ import fraction from 'fraction';
 
 ## Upgrading
 
-Whenever an upgrading ember-cli-fraction-shim, be sure to rerun the generator manually if not installed via `ember install`.
+Whenever an upgrading `ember-cli-fraction-shim`, be sure to rerun the generator manually if not installed via `ember install`.
 
 To do this, `ember g ember-cli-fraction-shim`
 
